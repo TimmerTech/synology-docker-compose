@@ -10,7 +10,6 @@ services:
     image: index.docker.io/portainer/portainer-ce:latest
     restart: on-failure:3
     command: --admin-password '${PORTAINER_PASSWORD}' -H unix:///var/run/docker.sock
-    privileged: true
     labels:
       com.centurylinklabs.watchtower.enable: 'true'
     networks:
